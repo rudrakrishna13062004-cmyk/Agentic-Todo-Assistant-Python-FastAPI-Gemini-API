@@ -26,7 +26,7 @@ try:
 except ImportError:
     pass
 
-API_KEY = ("GEMINI_API_KEY")
+API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise RuntimeError(
         "GEMINI_API_KEY set nahi hai. .env file ya environment variable mein daalo."
